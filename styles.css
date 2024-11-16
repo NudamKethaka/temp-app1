@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-    background-color: #607d8b; /* Blue-grey */
+    background-color: #37A6E5; /* Blue-grey */
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -29,6 +29,59 @@ header .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/* Text Animation */
+.changing-text {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    height: 3.2rem; /* Match font size */
+}
+
+.changing-text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #066AAF;
+    animation: underline 3s infinite ease-in-out;
+    width: 100%;
+}
+
+@keyframes underline {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes changeText {
+    0%, 20% {
+        content: 'Nudam Gaming';
+    }
+    25%, 45% {
+        content: 'Nudam Designs ';
+    }
+    50%, 70% {
+        content: 'Nudam Web Designs';
+    }
+    75%, 95% {
+        content: 'Nudam Photography';
+    }
+}
+
+.changing-text::before {
+    content: 'Nudam Gaming';
+    animation: changeText 5s infinite;
+}
+
 
 header nav ul {
     list-style: none;
@@ -59,7 +112,7 @@ header nav ul li a:hover {
 
 .home {
     background-color: white;
-    color: #607d8b;
+    color: #37A6E5;
 }
 
 .about {
@@ -99,7 +152,7 @@ header nav ul li a:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #607d8b;
+    background-color: #37A6E5;
     color: white;
     margin-top: 2rem;
 }
