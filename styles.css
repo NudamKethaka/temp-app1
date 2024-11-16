@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-    background-color: #37A6E5; /* Blue-grey */
+    background-color: #066AAF; /* Blue-grey */
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -48,7 +48,7 @@ header .logo {
     bottom: 0;
     left: 0;
     height: 3px;
-    background-color: #066AAF;
+    background-color: #67C9FA;
     animation: underline 3s infinite ease-in-out;
     width: 100%;
 }
@@ -79,7 +79,7 @@ header .logo {
 
 .changing-text::before {
     content: 'Nudam Gaming';
-    animation: changeText 5s infinite;
+    animation: changeText 5.5s infinite;
 }
 
 
@@ -101,8 +101,52 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #ffcc00; /* Highlight color */
+    color: #67C9FA; /* Highlight color */
 }
+
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+/* Text Section */
+.text-section {
+    flex: 1;
+    max-width: 100%; /* Ensure text doesn't overflow */
+}
+
+.text-section h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.0rem;
+    color: #607d8b; /* Blue-grey color for text */
+}
+
+.text-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+}
+
+.image-section img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+
 
 /* Sections */
 .section {
