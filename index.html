@@ -1,158 +1,68 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f9fa; /* Light grey background */
-    color: #333; /* Dark text */
-}
+             <span class="changing-text"></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* Header */
-header {
-    background-color: #37A6E5; /* Blue-grey */
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section home">
+            <h1>Welcome to My Personal Website</h1>
+            <p>Discover more about me, my work, and how to connect.</p>
+        </section>
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <h2>About Me</h2>
+            <p>Hi, I'm [Your Name], a passionate developer and designer. I love creating stunning websites and applications that solve real-world problems.</p>
+        </section>
 
-/* Text Animation */
-.changing-text {
-    display: inline-block;
-    font-size: 2rem;
-    font-weight: bold;
-    position: relative;
-    color: white;
-    overflow: hidden;
-    height: 3.2rem; /* Match font size */
-}
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <h3>Project 1</h3>
+                    <p>A brief description of the project.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Project 2</h3>
+                    <p>A brief description of the project.</p>
+                </div>
+            </div>
+        </section>
 
-.changing-text::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    background-color: #066AAF;
-    animation: underline 3s infinite ease-in-out;
-    width: 100%;
-}
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <h2>Contact Me</h2>
+            <p>Email: your.email@example.com</p>
+            <p>Phone: +123456789</p>
+        </section>
+    </main>
 
-@keyframes underline {
-    0%, 100% {
-        width: 0;
-    }
-    50% {
-        width: 100%;
-    }
-}
-
-@keyframes changeText {
-    0%, 20% {
-        content: 'Nudam Gaming';
-    }
-    25%, 45% {
-        content: 'Nudam Designs ';
-    }
-    50%, 70% {
-        content: 'Nudam Web Designs';
-    }
-    75%, 95% {
-        content: 'Nudam Photography';
-    }
-}
-
-.changing-text::before {
-    content: 'Nudam Gaming';
-    animation: changeText 5s infinite;
-}
-
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-}
-
-header nav ul li {
-    margin-left: 1.5rem;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #ffcc00; /* Highlight color */
-}
-
-/* Sections */
-.section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.home {
-    background-color: white;
-    color: #37A6E5;
-}
-
-.about {
-    background-color: #e0e0e0; /* Light grey */
-}
-
-.portfolio {
-    background-color: #f5f5f5; /* Slightly lighter grey */
-}
-
-.portfolio-items {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.portfolio-item {
-    background: white;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: transform 0.3s;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-.contact {
-    background-color: #eceff1; /* Blue-grey tint */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #37A6E5;
-    color: white;
-    margin-top: 2rem;
-}
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+</body>
+</html>
